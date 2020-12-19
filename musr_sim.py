@@ -5,6 +5,7 @@ Created on Fri Mar 20 13:30:38 2020
 @author: Shayan
 """
 
+
 import numpy as np
 import random
 import matplotlib.pyplot as plt
@@ -14,7 +15,7 @@ import scipy.stats as stats
 from scipy.special import jv
 ##################
 
-def musr(nevent):
+def musr(nevent,magfield):
 #initialization of the arrays and parameters we will use later on, will be explained later
   plt.close('all')
   n_event=nevent#
@@ -38,14 +39,14 @@ def musr(nevent):
       #the time it takes for the nth muon to decay
       time[i]=np.random.exponential(((2.2)))
       #The magnetic field sensed by the muons
-      field[i]=.016#np.random.normal(loc=40,scale=50)/10000 #
+      field[i]=magfield#np.random.normal(loc=40,scale=50)/10000 #
       #The energy of the emitted positron (approximates the real distribution)
       energy[i]=51*(stats.genhalflogistic.rvs(c=1,loc=1)-1)#np.random.normal(25,5)
       #"a" parameter of the nth muon decay event (see notes)
       a[i]= ((2*energy[i]/52)-1)/(3-2*(energy[i]/52)) 
       std[i]=np.true_divide(2.6,(a[i]+0.34))
       #mu is the angle the muon spin has before decaying
-      mu[i]=0.8*np.pi*np.cos(field[i]*135.5*time[i])#*np.exp(-0.3*time[i])
+      mu[i]=0.8*np.pi*np.cos(field[i]*2*3.14*135.5*time[i])#*np.exp(-0.3*time[i])
       #The actual angle of decay based on an approximation of the cardiod decay distribution.
       theta[i]=stats.truncnorm.rvs((lower - mu[i]) / std[i], (upper - mu[i]) / std[i], loc=mu[i], scale=std[i])
       #Here the events are "binned" and theta's are scaled into the [-pi,pi] domain
