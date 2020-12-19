@@ -16,14 +16,15 @@ Ideally, this code can be developed further to place muons in realistic magnetic
 
 ## Usage
 
-Install requirements
+Install requirements:
 
     pip install -r requirements.txt
     
-Run the code
+Run the code:
 
-    musr(nevents) 
+    musr(nevents,magfield) 
 
-where nevents is the number of events you wish to evaluate. The code currently runs at 
+where nevents is the number of events you wish to evaluate and magfield is the magnetic field (in Tesla). If the field gets too high you will have to increase the number of bins, of course (k parameter in the source). 
+
 
 
