@@ -24,7 +24,7 @@ Run the code:
 
     musr(nevents,magfield) 
 
-where nevents is the number of events you wish to evaluate and magfield is the magnetic field (in Tesla). If the field gets too high you will have to increase the number of bins, of course (k parameter in the source). 
+where nevents is the number of events you wish to evaluate and magfield is the magnetic field (in Tesla). If the entered field value is too large you will have to increase the number of bins, of course (k parameter in the source). 
 
 
 
