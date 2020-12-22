@@ -1,5 +1,5 @@
 # muSR Simulation Visualization 
-⚛️ A statistics-based simulation of a simple musr experiments.
+⚛️ A statistics-based simulation of a simple musr experiment.
 
 
 ## About
