@@ -1,5 +1,5 @@
 # muSR Simulation Visualization 
-⚛️ A statistics-based simulation of a simple musr experiment.
+⚛️ A statistics-based simulation of a simple muon spin rotation/relaxation experiment.
 
 
 ## About
