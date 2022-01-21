@@ -1,7 +1,7 @@
 # muSR Simulation Visualization 
 ⚛️ A statistics-based simulation of a simple muon spin rotation/relaxation experiment.
 
-
+Written by Shayan Gheidi.
 ## About
 
 This script (crudely) simulates and approximates some basic concepts of a muon spin rotation experiment in two-dimensions. 
